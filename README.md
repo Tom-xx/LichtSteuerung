@@ -16,4 +16,4 @@ Es sind idr. keine Lötarbeiten erforderlich.
 
 # Konfiguration
 
-Über die Datei main.ino kann im Array "arrrSwitchGroups" jeder Schalter verschiedenen Lampen zugeordnet werden, bei Betätigung vom jeweiligen Schalter werden die entsprechenden Lampen geschaltet / ausgeschaltet. Schalter, welche gemeinsame Lampen schalten, bilden virtuelle Wechselschalter.
+Über die Datei main.ino kann im Array "arrrSwitchGroups" jeder Schalter verschiedenen Lampen zugeordnet werden, bei Betätigung vom jeweiligen Schalter werden die entsprechenden Lampen geschaltet / ausgeschaltet. Schalter, welche gemeinsame Lampen schalten, bilden virtuelle Wechselschalter. Die Zuordnung von Lampen zu Lichtschaltern geschieht über ein "true" in der Tabelle.
