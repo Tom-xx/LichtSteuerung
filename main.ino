@@ -30,6 +30,7 @@ boolean arrrSwitchGroups[6][8] = {
  * Wiring: 
  *  8 Solid State Relay Board: DC- => GND, DC+ => +5V, CH1...CH8 => Arduino: D5...D12
  *  Switching: GND => Switch in; A0...A5 => Switch out
+ */
 boolean arrrSwitch[6] = {HIGH,HIGH,HIGH,HIGH,HIGH,HIGH};
 
 static const uint8_t analogPins[6] = {A0,A1,A2,A3,A4,A5};
