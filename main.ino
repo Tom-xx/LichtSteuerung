@@ -25,6 +25,11 @@ boolean arrrSwitchGroups[6][8] = {
   {true, true, true, true, true, true, false, false}, //Switch 4, Light 0 ... 8
   {false, false, false, false, false, false, false, true}  //Switch 5, Light 0 ... 8
 };
+
+/*
+ * Wiring: 
+ *  8 Solid State Relay Board: DC- => GND, DC+ => +5V, CH1...CH8 => Arduino: D5...D12
+ *  Switching: GND => Switch in; A0...A5 => Switch out
 boolean arrrSwitch[6] = {HIGH,HIGH,HIGH,HIGH,HIGH,HIGH};
 
 static const uint8_t analogPins[6] = {A0,A1,A2,A3,A4,A5};
@@ -47,12 +52,6 @@ void setup() {
   }
 }
 
-void triggerLight(int num){
-  if(num >= 0 && num < 8){
-    lightStatus[num] = !lightStatus[num];
-  }
-}
-
 boolean switchChanged(int num){
   return (digitalRead(analogPins[num]) != arrrSwitch[num]);
 }
@@ -67,7 +66,7 @@ void checkAndSwitch(int num){
 
     for(j=0;j<8;j++){
       if(arrrSwitchGroups[num][j]){
-        triggerLight(j);
+        lightStatus[j] = !lightStatus[j];
       }
     }
 
