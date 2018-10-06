@@ -10,5 +10,6 @@ Lichtsteuerung auf Arduino Nano Basis mit 6 Schaltern und 8 Lampen über ein Rel
 * Arduino Nano Breakout Board / Screw Terminal
 * 8 Solid State Relay Low Level Trigger Modul
 * Schaltdraht zum verkabeln
+* 5V Netzteil für Hutschiene
 
 Es sind idr. keine Lötarbeiten erforderlich.
