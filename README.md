@@ -13,3 +13,7 @@ Lichtsteuerung auf Arduino Nano Basis mit 6 Schaltern und 8 Lampen über ein Rel
 * 5V Netzteil für Hutschiene
 
 Es sind idr. keine Lötarbeiten erforderlich.
+
+# Konfiguration
+
+Über die Datei main.ino kann im Array "arrrSwitchGroups" jeder Schalter verschiedenen Lampen zugeordnet werden, bei Betätigung vom jeweiligen Schalter werden die entsprechenden Lampen geschaltet / ausgeschaltet. Schalter, welche gemeinsame Lampen schalten, bilden virtuelle Wechselschalter.
