@@ -53,21 +53,13 @@ void setup() {
   }
 }
 
-boolean switchChanged(int num){
-  return (digitalRead(analogPins[num]) != arrrSwitch[num]);
-}
-
-void triggerSwitchStatus(int num){
-  arrrSwitch[num] = !arrrSwitch[num];
-}
-
 void checkAndSwitch(int num){
-  if(switchChanged(num)){
-    triggerSwitchStatus(num);
+  if(digitalRead(analogPins[num]) != arrrSwitch[num]){ //check if switch state changed
+    arrrSwitch[num] = !arrrSwitch[num]; //save changed switch status
 
     for(j=0;j<8;j++){
-      if(arrrSwitchGroups[num][j]){
-        lightStatus[j] = !lightStatus[j];
+      if(arrrSwitchGroups[num][j]){ //is light in switch group?
+        lightStatus[j] = !lightStatus[j]; //trigger light
       }
     }
 
